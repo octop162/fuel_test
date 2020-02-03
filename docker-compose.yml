@@ -1,0 +1,9 @@
+version: '3'
+services:
+    fuel:
+        build: .
+        volumes: 
+            - ./:/service
+            - ./php.ini:/usr/local/etc/php/php.ini
+        ports:
+            - "8080:80"
