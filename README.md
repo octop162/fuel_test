@@ -18,5 +18,15 @@ docker-compose run workspace
 composer create-project fuel/fuel --prefer-dist .
 ```
 
+## インストール実行時
+
+```bash
+docker-compose run workspace
+```
+
+```bash
+composer install
+```
+
 ## 参考
 - http://fuelphp.jp/docs/1.9/installation/instructions.html
