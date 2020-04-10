@@ -1,9 +1,17 @@
 version: '3'
 services:
     fuel:
-        build: .
+        build:
+            context: .
+            dockerfile: Dockerfile
         volumes: 
-            - ./:/service
-            - ./php.ini:/usr/local/etc/php/php.ini
+            - ./workspace:/var/www/html/fuel
         ports:
             - "8080:80"
+    workspace:
+        build:
+            context: .
+            dockerfile: Dockerfile-Workspace
+        volumes: 
+            - ./workspace/:/workspace
+        working_dir: /workspace
