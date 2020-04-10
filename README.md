@@ -7,8 +7,8 @@
 - workspace
   - fuelのインストール場所
 
-## インストール
-（最初）workspaceで実行
+## 初回インストール
+workspaceで実行（リセットするときはworkspaceを空にする）
 
 ```bash
 docker-compose run workspace
@@ -18,7 +18,7 @@ docker-compose run workspace
 composer create-project fuel/fuel --prefer-dist .
 ```
 
-## インストール実行時
+## インストール後実行時
 
 ```bash
 docker-compose run workspace
@@ -26,6 +26,16 @@ docker-compose run workspace
 
 ```bash
 composer install
+```
+
+## テスト実施時
+
+```bash
+docker-compose run workspace
+```
+
+```bash
+php oil test
 ```
 
 ## 参考
