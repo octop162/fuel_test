@@ -30,6 +30,14 @@ composer install
 
 ## テスト実施時
 
+サーバ起動
+
+```bash
+docker-compose up -d
+```
+
+workspaceからテスト実施
+
 ```bash
 docker-compose run --rm workspace
 ```
