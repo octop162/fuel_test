@@ -9,7 +9,7 @@ class DbTestCase extends \PHPUnit_Extensions_Database_TestCase {
   }
 
   public function getDataSet() {
-    return $this->createFlatXmlDataset(APPPATH."tests/fixture/defaultBook.xml");
+    return new \PHPUnit_Extensions_Database_DataSet_YamlDataSet(APPPATH."tests/fixture/defaultBook.yaml");
   }
 
   public function setDataSet() {}
